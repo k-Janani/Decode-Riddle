@@ -1,0 +1,97 @@
+import random
+
+str0='Identify the hidden mountain in this word:SLAP (Please enter the answer in capital letters)'
+str1='This word has seven letters but it can accommodate more than 100 letters.What is that word?(Please enter the answer in capital letters.Also make sure to enter multiple words separated by spaces)'
+str2='The product and the sum of 3 numbers are the same.Identify the numbers.(Please enter the numbers separated with commas'
+str3='The first two letters and last two letters of two games are there in the word CASH.Identify the names of the 2 sports.(Please enter the names of the sports in capital letters and separated by a comma)'
+str4='What will come next in the following series?FM,AM,JJ,AS,ON,?(Please enter the answer in capital letters)'
+str5='This word has four letters.\nIf you read from left it is an animal.','If you read from right it is a talk slender grass.Identify the word.(Please enter the answer in capital letters)'
+var=[str0,str1,str2,str3,str4,str5]
+
+ans0='ALPS'
+ans1='POST BOX'
+ans2='1,2,3'
+ans3='CARROM,SQUASH'
+ans4='DJ'
+ans5='DEER'
+ans=[ans0,ans1,ans2,ans3,ans4,ans5]
+
+
+
+num1=num2=num3=score=count=0
+guess=' '
+
+print('Welcome to MEDDLE WITH RIDDLE!!')
+print('Here are the questions:')
+print('1.\t')
+count=0
+num1=random.randint(0,1)
+for j in range(0,3):
+    for i in range(0,2):
+        if num1==i:
+            print(var[i])
+            break;
+        else:
+            continue
+    guess=input('Enter your guess:')
+    if guess==ans[num1]:
+        print('Correct!!!!')
+        score+=1
+        break
+    else:
+        print('Try again!')
+
+    if j==2:
+        print('Wrong answer!')
+        
+        
+    
+    
+        
+    
+
+print('2.\t')
+count=0
+num2=random.randint(2,3)
+for j in range(0,3):
+    for i in range(2,4):
+        if num2==i:
+            print(var[i])
+            break;
+    guess=input('Enter your guess:\n')
+    if guess==ans[num2]:
+        print('Correct!!!!')
+        score+=1
+        break
+    else:
+        print('Try again!')
+    if j==2:
+        print('Wrong answer')
+        
+    
+        
+
+
+num3=random.randint(4,5)
+print('3.\t')
+count=0
+for j in range(0,3):
+    for i in range(4,6):
+        if num3==i:
+            print(var[i])
+            break;
+    guess=input('Enter your guess:\n')
+    if guess==ans[num3]:
+         print('Correct!!!!')
+         score+=1
+         break
+    else:
+        print('Try again!')
+    if j==2:
+        print('Wrong answer!')
+    
+
+if score==3:
+    print('Congratulations!!!!!\nYou won the quiz!!!!!')
+else:
+    print('Oops!! Try again next time')
